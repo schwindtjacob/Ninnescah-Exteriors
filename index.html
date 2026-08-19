@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ninnescah Exteriors | Roofing, Concrete, Gutters & Painting — Wichita, KS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --charcoal:#2b2b28;
+    --limestone:#f3efe4;
+    --limestone-2:#eae4d3;
+    --slate:#4a6a7a;
+    --rust:#b8582e;
+    --line:#d7d0bd;
+    --white:#fdfcf8;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--limestone);
+    color:var(--charcoal);
+    font-family:'Inter',sans-serif;
+    line-height:1.6;
+  }
+  h1,h2,h3{font-family:'Fraunces',serif;font-weight:500;color:var(--charcoal);}
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:var(--rust);
+  }
+  a{color:inherit;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 32px;}
+
+  /* NAV */
+  nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(243,239,228,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;}
+  .brand{display:flex;align-items:center;gap:12px;}
+  .brand-mark{width:36px;height:36px;flex:none;}
+  .brand-name{font-family:'Fraunces',serif;font-weight:600;font-size:19px;}
+  .brand-name span{display:block;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:2px;color:var(--slate);font-weight:400;}
+  .navlinks{display:flex;gap:32px;font-size:14px;font-weight:500;}
+  .navlinks a{text-decoration:none;border-bottom:2px solid transparent;padding-bottom:2px;transition:border-color .2s;}
+  .navlinks a:hover{border-color:var(--rust);}
+  .nav-phone{font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:500;color:var(--charcoal);text-decoration:none;padding:10px 18px;border:1.5px solid var(--charcoal);border-radius:2px;transition:background .2s,color .2s;}
+  .nav-phone:hover{background:var(--charcoal);color:var(--white);}
+  @media(max-width:760px){.navlinks{display:none;}}
+
+  /* HERO */
+  .hero{position:relative;overflow:hidden;padding:96px 0 80px;}
+  .hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;}
+  .hero h1{font-size:52px;line-height:1.08;letter-spacing:-.5px;margin:18px 0 22px;}
+  .hero h1 em{font-style:italic;color:var(--rust);}
+  .hero p{font-size:17px;max-width:46ch;color:#4a473f;}
+  .hero-cta{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap;}
+  .btn{
+    font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:1px;text-transform:uppercase;
+    padding:15px 26px;border-radius:2px;text-decoration:none;display:inline-block;font-weight:500;
+    transition:transform .15s, box-shadow .15s;
+  }
+  .btn-primary{background:var(--rust);color:var(--white);}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 0 rgba(43,43,40,.15);}
+  .btn-ghost{border:1.5px solid var(--charcoal);color:var(--charcoal);}
+  .btn-ghost:hover{background:var(--charcoal);color:var(--white);}
+
+  .river-art{width:100%;height:auto;}
+
+  /* LOCAL STRIP */
+  .strip{background:var(--charcoal);color:var(--limestone);padding:22px 0;}
+  .strip .wrap{display:flex;gap:48px;flex-wrap:wrap;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.5px;color:#c9c4b3;}
+  .strip strong{color:var(--white);font-weight:500;}
+
+  /* SECTION HEADERS */
+  section{padding:96px 0;}
+  .sec-head{max-width:640px;margin-bottom:56px;}
+  .sec-head h2{font-size:34px;margin-top:12px;letter-spacing:-.3px;}
+  .sec-head p{color:#4a473f;margin-top:14px;font-size:16px;}
+
+  /* LOCAL/ABOUT */
+  .about{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .about .grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
+  .about ul{list-style:none;margin-top:24px;display:flex;flex-direction:column;gap:18px;}
+  .about li{display:flex;gap:14px;font-size:15px;}
+  .about li .dot{flex:none;width:8px;height:8px;border-radius:50%;background:var(--rust);margin-top:8px;}
+  .about-photo{background:var(--limestone-2);border:1px solid var(--line);border-radius:4px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8a8474;text-align:center;padding:20px;}
+
+  /* PARTNERSHIP BANNER */
+  .partner{background:var(--slate);color:var(--white);}
+  .partner .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center;}
+  .partner .eyebrow{color:#cfe0e6;}
+  .partner h2{color:var(--white);font-size:30px;margin-top:10px;}
+  .partner p{color:#dce7ea;margin-top:16px;font-size:15.5px;max-width:52ch;}
+  .partner-badge{
+    border:1px solid rgba(255,255,255,.35);border-radius:4px;padding:28px;
+    font-family:'IBM Plex Mono',monospace;
+  }
+  .partner-badge .label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#cfe0e6;}
+  .partner-badge .biz{font-family:'Fraunces',serif;font-size:24px;font-weight:500;margin:8px 0 6px;color:var(--white);}
+  .partner-badge .desc{font-size:13.5px;color:#dce7ea;line-height:1.6;}
+
+  /* SERVICES */
+  .service{border-top:1px solid var(--line);padding:72px 0;}
+  .service .wrap{display:grid;grid-template-columns:.55fr 1.45fr;gap:56px;}
+  .service-head .num{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--rust);letter-spacing:1px;}
+  .service-head h3{font-size:28px;margin:10px 0 14px;}
+  .service-head p{font-size:14.5px;color:#4a473f;}
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  .gallery .g-item{
+    aspect-ratio:4/3;background:var(--limestone-2);border:1px solid var(--line);border-radius:3px;
+    display:flex;align-items:center;justify-content:center;text-align:center;padding:10px;
+    font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8a8474;
+    overflow:hidden;
+  }
+  .gallery .g-item img{width:100%;height:100%;object-fit:cover;display:block;}
+  .g-item{position:relative;}
+  .g-item .placeholder-tag{
+    position:absolute;top:8px;left:8px;
+    background:rgba(43,43,40,0.85);color:var(--white);
+    font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1px;text-transform:uppercase;
+    padding:4px 8px;border-radius:2px;
+  }
+  @media(max-width:820px){
+    .hero .wrap,.about .grid,.partner .wrap,.service .wrap{grid-template-columns:1fr;}
+    .gallery{grid-template-columns:repeat(2,1fr);}
+    .hero h1{font-size:38px;}
+  }
+
+  /* CONTACT */
+  .contact{background:var(--charcoal);color:var(--limestone);}
+  .contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+  .contact h2{color:var(--white);font-size:34px;}
+  .contact p{color:#c9c4b3;margin-top:14px;max-width:44ch;}
+  .contact-card{border:1px solid rgba(255,255,255,.2);border-radius:4px;padding:32px;}
+  .contact-row{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12);font-size:14.5px;}
+  .contact-row:last-child{border-bottom:none;}
+  .contact-row span:first-child{color:#a9a493;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:1px;text-transform:uppercase;}
+  .contact-row span:last-child{font-weight:500;}
+  .contact .btn-primary{margin-top:22px;display:inline-block;}
+
+  footer{padding:32px 0;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:12px;color:#8a8474;}
+
+  /* QUOTE FORM */
+  .quote{background:var(--white);border-top:1px solid var(--line);}
+  .quote .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start;}
+  .quote-form{display:flex;flex-direction:column;gap:18px;}
+  .field label{display:block;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#6b6656;margin-bottom:8px;}
+  .field input,.field textarea{
+    width:100%;font-family:'Inter',sans-serif;font-size:15px;color:var(--charcoal);
+    background:var(--limestone);border:1px solid var(--line);border-radius:2px;
+    padding:13px 14px;resize:vertical;
+  }
+  .field input:focus,.field textarea:focus{outline:none;border-color:var(--rust);}
+  .field textarea{min-height:110px;}
+  .quote-note{font-size:12.5px;color:#8a8474;margin-top:4px;}
+  .quote-status{font-size:13.5px;margin-top:6px;display:none;}
+  .quote-status.show{display:block;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">
+      <svg class="brand-mark" viewBox="0 0 100 100" role="img" aria-label="Ninnescah Exteriors mark">
+        <circle cx="50" cy="50" r="42" fill="none" stroke="#2b2b28" stroke-width="3"/>
+        <path d="M28 46 L50 18 L72 46 Z" fill="none" stroke="#2b2b28" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M14 58 C 26 50, 34 64, 44 62 C 54 60, 56 66, 54 72" fill="none" stroke="#4a6a7a" stroke-width="3.5" stroke-linecap="round"/>
+        <path d="M86 58 C 74 50, 66 64, 56 62" fill="none" stroke="#4a6a7a" stroke-width="3.5" stroke-linecap="round"/>
+        <path d="M54 72 C 52 76, 48 76, 42 79 C 34 82, 28 78, 16 82" fill="none" stroke="#b8582e" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+      <div class="brand-name">Ninnescah Exteriors<span>WICHITA, KS</span></div>
+    </div>
+    <div class="navlinks">
+      <a href="#services">Services</a>
+      <a href="#local">Local crew</a>
+      <a href="#quote">Get a quote</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="nav-phone" href="tel:3168160563">316.816.0563</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Roofing · Concrete · Gutters · Painting</div>
+      <h1>Local crew, <em>local river,</em><br>your exterior done right.</h1>
+      <p>Ninnescah Exteriors is a Wichita-based crew handling roofing, concrete, gutters, and exterior painting — with local people showing up to your job, not a call center. For full home renovations, we work hand-in-hand with Flatland Construction.</p>
+      <div class="hero-cta">
+        <a href="tel:3168160563" class="btn btn-primary">Call 316.816.0563</a>
+        <a href="#services" class="btn btn-ghost">See our work</a>
+      </div>
+    </div>
+    <svg class="river-art" viewBox="0 0 420 420" role="img" aria-label="Illustration of a roofline above the forks of the Ninnescah river">
+      <circle cx="210" cy="200" r="168" fill="none" stroke="#2b2b28" stroke-width="2"/>
+      <path d="M110 150 L210 40 L310 150 Z" fill="none" stroke="#2b2b28" stroke-width="6" stroke-linejoin="round"/>
+      <path d="M60 220 C 110 190, 150 240, 190 232 C 230 224, 236 246, 224 268" fill="none" stroke="#4a6a7a" stroke-width="8" stroke-linecap="round"/>
+      <path d="M360 220 C 310 190, 270 240, 224 232" fill="none" stroke="#4a6a7a" stroke-width="8" stroke-linecap="round"/>
+      <path d="M224 268 C 218 284, 200 284, 178 296 C 148 312, 118 300, 60 316" fill="none" stroke="#b8582e" stroke-width="10" stroke-linecap="round"/>
+    </svg>
+  </div>
+</header>
+
+<div class="strip">
+  <div class="wrap">
+    <div><strong>Wichita, KS</strong> — locally based crew</div>
+    <div><strong>4 services</strong> — roofing, concrete, gutters, painting</div>
+  </div>
+</div>
+
+<section class="about" id="local">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:0;">
+      <div class="eyebrow">Who shows up at your house</div>
+      <h2>A local crew, not a dispatch center.</h2>
+      <p>We're a Wichita company. The people who scope your job, set the schedule, and show up to do the work live around here — this is our community too, and our name is on it.</p>
+      <ul>
+        <li><span class="dot"></span> One point of contact from estimate to final walkthrough — you're not bounced between departments.</li>
+        <li><span class="dot"></span> Every crew we bring to your property is vetted, experienced, and known to us personally.</li>
+        <li><span class="dot"></span> Straightforward pricing and a real person answering the phone at 316.816.0563.</li>
+      </ul>
+    </div>
+    <div class="about-photo">[ Photo: crew on a Wichita-area job site ]</div>
+  </div>
+</section>
+
+
+
+<section id="services">
+  <div class="wrap sec-head">
+    <div class="eyebrow">What we do</div>
+    <h2>Four services. One local crew.</h2>
+    <p>Browse recent work in each category below — photos from real Wichita-area jobs.</p>
+  </div>
+
+  <div class="service">
+    <div class="wrap">
+      <div class="service-head">
+        <div class="num">01 / Roofing</div>
+        <h3>Roofing</h3>
+        <p>Full tear-offs, re-roofs, and storm repair. Built to hold up to Kansas weather, installed by crews we trust.</p>
+      </div>
+      <div class="gallery">
+        <div class="g-item"><img src="images/roofing-1.jpeg" alt="Covered patio gable roof structure"></div>
+        <div class="g-item"><img src="images/roofing-2.jpeg" alt="Two-story home with covered deck roof"></div>
+        <div class="g-item"><img src="images/roofing-3.jpeg" alt="Covered deck roof over stone patio"></div>
+        <div class="g-item"><img src="images/roofing-4.jpeg" alt="Covered deck roof, rear elevation"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="service">
+    <div class="wrap">
+      <div class="service-head">
+        <div class="num">02 / Concrete</div>
+        <h3>Concrete</h3>
+        <p>Driveways, patios, and flatwork poured and finished by local crews who know how Kansas freeze-thaw treats a slab.</p>
+      </div>
+      <div class="gallery">
+        <div class="g-item"><img src="images/concrete-1.jpeg" alt="Covered patio addition over concrete slab"></div>
+        <div class="g-item"><img src="images/concrete-2.jpeg" alt="Barn interior framing"></div>
+        <div class="g-item"><img src="images/concrete-3.jpeg" alt="Red barn with covered concrete porch"></div>
+        <div class="g-item"><img src="images/concrete-4.jpeg" alt="Pergola over concrete patio"></div>
+        <div class="g-item"><img src="images/concrete-5.jpeg" alt="Two-car garage driveway concrete pour"></div>
+        <div class="g-item"><img src="images/concrete-6.jpeg" alt="Concrete carport pad"></div>
+        <div class="g-item"><img src="images/concrete-7.jpeg" alt="Concrete patio with deck stairs"></div>
+        <div class="g-item"><img src="images/concrete-8.jpeg" alt="Stamped concrete patio under covered roof"></div>
+        <div class="g-item"><img src="images/concrete-9.jpeg" alt="Stamped concrete patio, roof under construction"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="service">
+    <div class="wrap">
+      <div class="service-head">
+        <div class="num">03 / Gutters</div>
+        <h3>Gutters</h3>
+        <p>Seamless gutter installation and repair, sized and sloped correctly so water actually goes where it's supposed to.</p>
+      </div>
+      <div class="gallery">
+        <div class="g-item"><img src="images/gutters-1.jpeg" alt="Screened porch with gutter line"></div>
+        <div class="g-item"><img src="images/gutters-2.jpeg" alt="Covered patio with brick and gutter line"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="service">
+    <div class="wrap">
+      <div class="service-head">
+        <div class="num">04 / Painting</div>
+        <h3>Painting</h3>
+        <p>Siding, trim, and exterior surfaces prepped and painted to hold color through Kansas summers and winters alike.</p>
+      </div>
+      <div class="gallery">
+        <div class="g-item"><img src="images/painting-1.webp" alt="Crew painting house exterior siding and brick"></div>
+        <div class="g-item"><img src="images/painting-2.webp" alt="Crew painting roofline and trim"></div>
+        <div class="g-item"><img src="images/painting-3.jpeg" alt="Finished gray house exterior paint"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quote" id="quote">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:0;">
+      <div class="eyebrow">Get a quote</div>
+      <h2>Request a quote.</h2>
+      <p>Tell us a bit about the job and we'll get back to you. Prefer to talk it through instead? Call 316.816.0563.</p>
+    </div>
+    <form class="quote-form" id="quoteForm">
+      <div class="field">
+        <label for="q-name">Name</label>
+        <input type="text" id="q-name" name="name" required>
+      </div>
+      <div class="field">
+        <label for="q-phone">Phone number</label>
+        <input type="tel" id="q-phone" name="phone" required>
+      </div>
+      <div class="field">
+        <label for="q-address">Property address</label>
+        <input type="text" id="q-address" name="address" required>
+      </div>
+      <div class="field">
+        <label for="q-desc">Description of work</label>
+        <textarea id="q-desc" name="description" required></textarea>
+      </div>
+      <div>
+        <button type="submit" class="btn btn-primary" style="border:none;cursor:pointer;">Send request</button>
+        <div class="quote-note">Opens your email app with this filled in, addressed to us — just hit send.</div>
+        <div class="quote-status" id="q-status"></div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Get a quote</div>
+      <h2>Let's look at your project.</h2>
+      <p>Call or reach out below — a local crew member will scope the job and get you a straightforward estimate.</p>
+      <a href="tel:3168160563" class="btn btn-primary">Call 316.816.0563</a>
+    </div>
+    <div class="contact-card">
+      <div class="contact-row"><span>Phone</span><span>316.816.0563</span></div>
+      <div class="contact-row"><span>Service area</span><span>Wichita, KS &amp; surrounding</span></div>
+      <div class="contact-row"><span>Services</span><span>Roofing, Concrete, Gutters, Painting</span></div>
+      <div class="contact-row"><span>Bigger project?</span><span>Ask about Flatland Construction</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>© Ninnescah Exteriors — Wichita, KS</footer>
+
+</body>
+<script>
+(function(){
+  var form = document.getElementById('quoteForm');
+  var status = document.getElementById('q-status');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = document.getElementById('q-name').value.trim();
+    var phone = document.getElementById('q-phone').value.trim();
+    var address = document.getElementById('q-address').value.trim();
+    var desc = document.getElementById('q-desc').value.trim();
+
+    if(!name || !phone || !address || !desc){
+      status.textContent = 'Please fill in every field before sending.';
+      status.style.color = '#b8582e';
+      status.classList.add('show');
+      return;
+    }
+
+    var subject = 'Quote request: ' + name;
+    var body = 'Name: ' + name + '\n' +
+               'Phone: ' + phone + '\n' +
+               'Address: ' + address + '\n\n' +
+               'Description of work:\n' + desc;
+    var mailto = 'mailto:schwindtjacob@icloud.com' +
+                 '?subject=' + encodeURIComponent(subject) +
+                 '&body=' + encodeURIComponent(body);
+
+    status.textContent = 'Opening your email app — hit send there to finish.';
+    status.style.color = '#4a6a7a';
+    status.classList.add('show');
+    window.location.href = mailto;
+  });
+})();
+</script>
+</html>
